@@ -1,0 +1,161 @@
+body.errors {
+  &.internal_server_error {
+    > #content {
+      background-color: #2a2a2a;
+    }
+
+    .error-content {
+      p {
+        color: $color-yellow;
+      }
+    }
+
+    .error-title {
+      color: #ffffff;
+      padding-right: 30px;
+    }
+  }
+}
+
+// Spaceship Animation
+
+.Spaceship,
+.Stars,
+.Spaceship-beam,
+.Spaceship-eyes {
+  position: absolute;
+}
+
+@keyframes bouncing {
+  from {
+    transform: translate3d(0, 0px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 15px, 0) scale(0.98);
+  }
+  to {
+    transform: translate3d(0, 0px, 0) scale(1);
+  }    
+}
+
+$spaceship-positions: 57% 30%, 64% 0%, 95% 28%, 80% 81%;
+
+@each $position in $spaceship-positions {
+  $index: index($spaceship-positions, $position);
+
+  .Spaceship--#{$index} {
+    animation: bouncing $index + 2.5s ease-in-out infinite;
+    background-image: image_url("application/errors/500/space-#{$index}.png");
+    left: nth($position, 1);
+    top: nth($position, 2);
+  }
+}
+
+.Spaceship--1 {
+  height: 224px;
+  width: 529px;
+}
+
+.Spaceship--2 {
+  height: 154px;
+  width: 112px;
+}
+
+.Spaceship--3 {
+  height: 91px;
+  width: 117px;
+}
+
+.Spaceship--4 {
+  height: 215px;
+  width: 154px;
+}
+
+.Stars {
+  background-image: image_url("application/errors/500/stars.png");
+  height: 559px;
+  left: 60%;
+  top: 0%;
+  width: 590px;
+}
+
+@keyframes beamer {
+  0% {
+    opacity: 0.3;
+  }
+  11% {
+    opacity: 0; 
+  }
+  22% {
+    opacity: 0.5;
+  }
+  33% {
+    opacity: 0;
+  }
+  44% {
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.Spaceship-beam {
+  $bean-height: 350px;
+  $beam-width: 260px;
+  animation: beamer 6s infinite linear;
+  animation-delay: 5;
+  border: {
+    bottom: $bean-height solid #363636;
+    left: 95px solid transparent;
+    right: 95px solid transparent;
+  }
+  bottom: -($bean-height + 2);
+  filter: blur(3px);
+  height: 0;
+  left: 50%;
+  margin-left: -($beam-width / 2);
+  opacity: 0;
+  width: $beam-width;
+}
+
+@keyframes eyes {
+  0% { 
+    transform: translate3d(0, 0, 0)
+  }
+  11% { 
+    transform: translate3d(1px, -1px, 0)
+  }
+  33% { 
+    transform: translate3d(2px, 0, 0)
+  }
+  66% { 
+    transform: translate3d(-1px, 1px, 0)
+  }
+  77% { 
+    transform: translate3d(0, 0, 0)
+  }
+  88% { 
+    transform: translate3d(0, 0, 0)
+  }
+  100% { 
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+.Spaceship-eyes {
+  animation: eyes 7s infinite;
+  animation-delay: 5s;
+  background: #482927;
+  border-radius: 50%;
+  height: 17px;
+  left: 48.5%;
+  top: 33%;
+  width: 15px;
+}

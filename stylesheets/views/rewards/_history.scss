@@ -1,0 +1,116 @@
+body.rewards.history {
+  $amount-color: #d8731b;
+
+  .table {
+    tbody {
+      @include font-size(18px);
+      font-weight: bold;
+
+      .description {
+        @include font-size(20px);
+        color: $product-background;
+      }
+
+      .amount {
+        &.debit {
+          color: $amount-color;
+
+          &::before {
+            content: "-";
+          }
+        }
+
+        &.credit {
+          &::before {
+            content: "+";
+          }
+        }
+
+        .tooltip-inner {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .pending-orders-table {
+    margin-bottom: 50px;
+
+    .table {
+      background: #eeeae1; 
+
+      > tbody > tr > td {
+        border-top: 0;
+        padding: 30px;
+      }
+    }
+
+    thead {
+      th {
+        border-bottom: 0;
+        padding: 0;
+      }
+
+      .pending {
+        @include font-size(20px);
+        border-bottom: 1px solid #d4d4d4;
+        margin: 30px 30px 0;
+        padding-bottom: 15px;
+      }
+    }
+
+    tbody {
+      .amount {
+        text-align: right;
+      }
+    }
+  }
+
+  .account-history-table {
+    thead {
+      background: $product-background;
+      color: #ffffff;
+
+      th {
+        border: 0;
+        padding: 10px 30px;
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid #e6e0d4;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &.sponsorship-change {
+          background: #ffffff;
+          border-top: 1px solid #ffffff;
+
+          + tr {
+            border-color: #ffffff;
+          }
+
+          .changed-to {
+            font-weight: normal;
+          }
+        }
+      }
+      td {
+        border: 0;
+        border-right: 1px solid #e6e0d4;
+        padding: 22px 30px;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    .question-icon {
+      color: #ddd8d4;
+    }
+  }
+}

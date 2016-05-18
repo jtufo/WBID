@@ -1,0 +1,16 @@
+@function map-deep-get($map, $keys...) {
+  $value: $map;
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+  @return $value;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+@function rem($size) {
+  $remSize: $size / $font-size-base;
+  @return #{$remSize}rem;
+}

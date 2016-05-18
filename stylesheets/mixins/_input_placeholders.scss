@@ -1,0 +1,19 @@
+@mixin placeholder-italicized {
+  input::placeholder {
+    color: #aaa;
+    font: {
+      family: $font-secondary;
+      weight: normal;
+      size: em(12);
+      style: italic;
+    }
+    line-height: em(30);
+  }
+}
+
+@mixin placeholder-bolded {
+  input::placeholder {
+    color: #666;
+    line-height: em(21);
+  }
+}

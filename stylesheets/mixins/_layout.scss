@@ -1,0 +1,12 @@
+@mixin inner-container($size: 10) {
+  $offset: (12 - $size) / 2;
+
+  .container {
+    .row {
+      .inner-container {
+        @extend .col-sm-offset-#{$offset};
+        @extend .col-sm-#{$size};
+      }
+    }
+  }
+}

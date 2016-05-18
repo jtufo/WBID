@@ -1,0 +1,40 @@
+.Display-box {
+  border: {
+    color: $color-grey-light;
+    style: solid;
+  }
+  text-align: center;
+  width: 100%;
+}
+
+.Display-box--lg {
+  @include font-size(16px);
+  @extend .Display-box;
+  border-width: 14px;
+  padding: 40px 60px;
+}
+
+.Display-box--md {
+  @include font-size(16px);
+  @extend .Display-box;
+  border-width: 8px;
+  padding: 40px 60px;
+}
+
+.Display-box--sm {
+  @include font-size(15px);
+  @extend .Display-box;
+  border-width: 4px;
+  padding: 20px 18px;
+}
+
+.Display-box--solid {
+  background: $color-blue;
+  border-width: 0 !important;
+}
+
+// Color
+
+.Display-box--white {
+  background: #ffffff;
+}

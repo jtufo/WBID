@@ -1,0 +1,18 @@
+@media only screen and (max-width: $screen-xs-max) {
+  .Display-box {
+    margin-bottom: 20px;
+  }
+
+  .Display-box--lg,
+  .Display-box--md {
+    padding: 20px;
+  }
+
+  .Display-box--lg {
+    border-width: 7px;
+  }
+
+  .Display-box--md {
+    border-width: 4px;
+  }
+}

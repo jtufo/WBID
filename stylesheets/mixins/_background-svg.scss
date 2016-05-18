@@ -1,0 +1,8 @@
+@mixin background-svg($file-location, $file-name) {
+  background: {
+    image: image-url("application/#{$file-location}/#{$file-name}.png"); // Fallback
+    image:
+      linear-gradient(transparent, transparent),
+      image-url("application/#{$file-location}/svg/#{$file-name}.svg");
+  }
+}

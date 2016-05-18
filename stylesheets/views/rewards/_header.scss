@@ -1,0 +1,58 @@
+.rewards-header-box {
+  background: #ffffff;
+  margin-left: 26%;
+  position: relative;
+
+  &::after {
+    @include size(234px, 154px);
+    background: image-url("application/rewards/rewards-bank.png") no-repeat;
+    bottom: 54px;
+    content: "";
+    position: absolute;
+    right: -300px;
+  }
+
+  a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: underline;
+  }
+
+  .rewards-bank {
+    img {
+      padding: 15% 0 0 5%;
+    }
+  }
+
+  .credits-earned {
+    span {
+      $digit-height: 106px;
+      @include font-size(84px);
+      background: $product-background;
+      color: #ffffff;
+      display: inline-block;
+      font-family:  $font-secondary;
+      line-height:  $digit-height + 10;
+      height:  $digit-height;
+      margin: 0 1% 20px;
+      padding: 0 4%;
+    }
+  }
+
+  .credits-earned-desc,
+  .view-wbt-account {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .account-history-link {
+    color: $product-background;
+  }
+
+  .view-wbt-link {
+    color: #a2a2a2;
+    font-style: italic;
+  }
+}
+
+

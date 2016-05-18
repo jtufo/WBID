@@ -1,0 +1,92 @@
+$browser-context: 16; // Default
+$font-size-base: 16px; // Default
+
+$font-primary: "PT Sans", "Arial", sans-serif;
+$font-secondary: "Clarendon", "Georgia", Serif;
+$line-height: 1.3125; // Based on 16px base
+
+$color-default-font: #666666;
+$color-link: #666666;
+$color-blue: #3b708e;
+$color-blue-facebook: #3666a1;
+$color-blue-green: #2bbcb9;
+$color-grey: #ddd;
+$color-grey-dark: #3c3c3c;
+$color-grey-light: #f6f3ee;
+$color-grey-focus: darken(#ddd, 10%);
+$color-green-light: #b6bf32;
+$color-pink: #ef4b5d;
+$color-orange: #f78d06;
+$color-purple: #58556c;
+$color-red: #bf311a;
+$color-yellow: #f8c92a;
+
+$grey-wrapper-bg: $color-grey-light;
+
+$footer-background: #595959;
+
+$custom-scrollbar-background: #eee;
+$error-background: #f9d6d2;
+$error-background-focus: darken($error-background, 10%);
+$error-text: #a07b77;
+
+$hr-color: #e6e2da;
+
+// Product Elements
+
+$color-dailychallenge: $color-orange;
+$color-hello200: $color-green-light;
+$color-walkadoo: $color-red;
+$color-walkadoo-secondary: $color-blue;
+$color-wellbeingtracker: $color-purple;
+$color-quitnet: $color-blue-green;
+
+// BSC Related
+
+$sign-up-step-size: 66px;
+
+// Product specific variables
+
+$product-colors: (
+  "dailychallenge": (
+    "background": $color-dailychallenge,
+    "background-dark": darken($color-dailychallenge, 15%),
+    "background-focus": darken($color-dailychallenge, 10%),
+    "background-light": lighten($color-dailychallenge, 15%),
+    "text": #fff
+  ),
+  "hello200": (
+    "background": $color-hello200,
+    "background-dark": darken($color-hello200, 15%),
+    "background-focus": darken($color-hello200, 10%),
+    "background-light": lighten($color-hello200, 15%),
+    "text": #fff
+  ),
+  "quitnet": (
+    "background": $color-blue-green,
+    "background-dark": darken($color-blue-green, 15%),
+    "background-focus": darken($color-blue-green, 10%),
+    "background-light": lighten($color-blue-green, 15%),
+    "text": #fff
+  ),
+  "walkadoo": (
+    "background": $color-walkadoo,
+    "background-dark": darken($color-walkadoo, 15%),
+    "background-focus": darken($color-walkadoo, 10%),
+    "background-light": lighten($color-walkadoo, 15%),
+    "text": #fff
+  ),
+  "wellbeingtracker": (
+    "background": $color-wellbeingtracker,
+    "background-dark": darken($color-wellbeingtracker, 15%),
+    "background-focus": darken($color-wellbeingtracker, 10%),
+    "background-light": lighten($color-wellbeingtracker, 15%),
+    "text": #fff
+  )
+);
+
+$product-background: #3a6f8f;
+$product-background-dark: darken(#3a6f8f, 15%);
+$product-background-focus: darken(#3a6f8f, 10%);
+$product-background-light: lighten(#3a6f8f, 15%);
+$product-text: #fff;

@@ -1,0 +1,73 @@
+body.congratulations.show {
+  $product-colors: (
+    "walkadoo": #f6f3e5,
+    "quitnet": #f6f3f0
+  );
+
+  @each $product, $bgcolor in $product-colors {
+    &.#{$product} {
+      #content {
+        background-color: $bgcolor;
+      }
+    }
+  }
+
+  #content {
+    > .container {
+      padding: {
+        bottom: 275px;
+        top: 65px;
+      }
+    }
+  }
+
+  .congratulations-content {
+    padding: 15px 10px 0;
+  }
+
+  h1 {
+    font-size: em(42);
+    margin: 0 0 12px;
+  }
+
+  a.support-link {
+    font-weight: bold;
+  }
+
+  .Button {
+    margin: 30px 0;
+  }
+
+  .app-download {
+    font-style: italic;
+  }
+
+  .app-store {
+    margin: 20px auto 0;
+  }
+
+  // Product specific 
+  &.quitnet {
+    h1 {
+      color: #585858;
+    }
+
+    .congratulations-content {
+      padding-top: 30px;
+    }
+  }
+
+  &.hello200 {
+    .congratulations-content {
+      padding-top: 0;
+    }
+  }
+
+  &.walkadoo {
+    #content {
+      > .container {
+        padding-bottom: 250px;
+      }
+    }
+  }
+}

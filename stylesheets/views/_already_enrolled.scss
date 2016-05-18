@@ -1,0 +1,97 @@
+body.already_enrolled.user_sessions {
+  $enrolled-offset: 155px;
+  $connected-padding: 40px;
+
+  .page-header {
+    @extend .page-header-white;
+    padding: 50px 0;
+
+    p {
+      text-transform: none;
+    }
+  }
+
+  .already-enrolled-wrapper {
+    margin-top: $enrolled-offset;
+  }
+
+  // Account Sign In
+  .account-sign-in {
+    margin-top: -$enrolled-offset;
+
+    .signin-register-box {
+      .masked-email {
+        font: {
+          weight: bold;
+          size: em(18);
+        }
+      }
+
+      form {
+        padding: 25px 0;
+
+        input[type="submit"] {
+          margin-top: 20px;
+        }
+      }
+
+      .help-password {
+        font-style: italic;
+
+        a {
+          color: $color-blue;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Keep Account Connected
+  .keep-your-account {
+    margin-top: 60px;
+  }
+
+  // Benefit of Keeping Account
+  .benefits-of-account {
+    margin-bottom: 60px;
+
+    .benefit-box {
+      padding-top: 60px;
+      text-align: center;
+
+      &:first-child {
+        border-right: 3px solid $hr-color;
+
+        p {
+          padding: 0 68px;
+        }
+      }
+
+      p {
+        padding: 0 85px;
+      }
+    }
+
+    .benefit-box-no-rewards {
+      padding-top: 60px;
+
+      h3 {
+        margin-top: 25px;
+        text-align: left;
+      }
+    }
+
+    h3 {
+      color: $color-blue;
+      font: {
+        family: $font-primary;
+        weight: 700;
+      }
+    }
+
+    img {
+      margin-bottom: 35px;
+    }
+  }
+}

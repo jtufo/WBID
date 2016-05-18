@@ -1,0 +1,17 @@
+// Bootstrap won't be implementing these responsive utility classes themselves until 4.0
+// https://github.com/twbs/bootstrap/issues/13690
+@media only screen and (max-width: $screen-xs-max) {
+  .pull-right-md {
+    float: right;
+  }
+
+  .pull-left-md {
+    float: left;
+  }
+
+  .u-row-centered,
+  .u-row-wrap {
+    display: block;
+    flex-direction: column;
+  }
+}

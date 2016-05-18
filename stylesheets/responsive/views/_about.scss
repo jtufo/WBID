@@ -1,0 +1,47 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.about.index {
+    .page-header {
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .page-title {
+      p {
+        margin: 10px 0;
+        padding: 0;
+      }
+    }
+
+    hr {
+      border: none;
+      margin: 10px 0;
+    }
+
+    .tab-content {
+      padding: 18px 14px;
+
+      &.for-registering {
+        p {
+          padding: 0 0 15px;
+        }
+      }
+    }
+
+    .tabs-label {
+      font-size: 13px;
+      padding: 15px 0;
+    }
+
+    .learn-more {
+      margin-top: 25px;
+
+      h2 {
+        margin-bottom: 8px;
+      }
+    }
+
+    footer {
+      padding-top: 15px;
+    }
+  }
+}

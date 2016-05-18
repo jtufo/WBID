@@ -1,0 +1,60 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.hps.start {
+    #content {
+      .page-header {
+        p {
+          padding: 0;
+        }
+      }
+    }
+
+    .bsc-logo-header {
+      margin-bottom: 10px;
+    }
+
+    .sign-up-intro {
+      padding: 20px 0px;
+    }
+
+    form {
+      label {
+        font-size: 14px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+      &.for-sex {
+        margin-bottom: 0;
+
+        + div {
+          margin-left: 16%;
+        }
+      }
+    }
+
+    .sign-up-step-number {
+      font-size: 17px;
+      height: $sign-up-step-size / 2;
+      line-height: ($sign-up-step-size / 2) - 5;
+      width: $sign-up-step-size / 2;
+    }
+
+    .sex-explanation {
+      margin: 0 0 20px 0;
+      padding: 12px;
+    }
+
+    .terms-title {
+      margin-bottom: 0;
+    }
+
+    footer {
+      .bsc-logo {
+        height: 30px;
+        width: 140px;
+      }
+    }
+  }
+}

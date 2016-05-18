@@ -1,0 +1,27 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.already_enrolled.user_sessions {
+    .keep-your-account {
+      margin-top: 20px;
+    }
+
+    .benefits-of-account {
+      padding-top: 20px;
+
+      .benefit-box {
+        padding: 20px 20px;
+
+        &:first-child {
+          border-right: none;
+        }
+
+        p {
+          padding: 0 !important;
+        }
+
+        img {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

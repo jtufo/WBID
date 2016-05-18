@@ -1,0 +1,94 @@
+// Layout - Nav
+
+nav {
+  @include inner-container;
+
+  background-color: #2b2b2b;
+  color: #ccc;
+  font: {
+    size: em(13);
+    weight: bold;
+  }
+  text-transform: uppercase;
+  text-align: right;
+  padding: 15px 0;
+
+  a {
+    color: inherit;
+  }
+
+  .user-nav {
+    padding: 10px 0;
+  }
+}
+
+// Layout - Content
+
+#content {
+  @include inner-container(8);
+  background-color: #fff;
+
+  > .container {
+    padding: {
+      bottom: 55px;
+      top: 40px;
+    }
+  }
+}
+
+// Layout - Page Elements
+
+.page-header, .page-subheader {
+  p {
+    margin: 0;
+  }
+}
+
+.page-header {
+  background-color: $product-background;
+  border-bottom: none;
+  color: $product-text;
+  margin: 0;
+  padding: 30px 0 25px;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.page-subheader {
+  background-color: #eee;
+  color: #777;
+  padding: 15px 0;
+  text-align: center;
+
+  a {
+    color: inherit;
+    font: {
+      style: italic;
+      weight: bold;
+    }
+    text-decoration: underline;
+  }
+}
+
+// Use this as @extend .page-header-white
+.page-header-white {
+  background-color: #ffffff;
+
+  h1 {
+    color: $product-background;
+  }
+
+  p {
+    color: $color-default-font;
+    text-transform: uppercase;
+  }
+}
+
+.page-actions {
+  background-color: #eee;
+  color: #666;
+  padding: 40px 0;
+}

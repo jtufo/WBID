@@ -1,0 +1,35 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.rewards.index {
+    #rewards-body-wrapper {
+      padding-bottom: 0;
+    }
+
+    .incentives {
+      margin-top: 40px;
+    }
+
+    .reward-incentive {
+      margin-bottom: 40px;
+    }
+
+    #rewards-behaviors {
+      padding-top: 30px;
+
+      .earning-credits {
+        a {
+          font-size: 14px;
+          display: block;
+          margin: 0;
+        }
+      }
+
+      .reward-behavior {
+        padding: 35px;
+      }
+
+      .behaviors {
+        padding-top: 30px;
+      }
+    }
+  }
+}

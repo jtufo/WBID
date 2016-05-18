@@ -1,0 +1,47 @@
+body.enrollments {
+  #content {
+    form#new_enrollment {
+      .more-information {
+        background-color: #eee;
+        margin: -40px -50px 30px;
+        padding: 40px 50px 25px;
+
+        h3 {
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
+
+        hr {
+          border-top-color: #ccc9c4;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+
+  &.create {
+    #content {
+      form#new_enrollment {
+        ul {
+          font-size: em(18);
+          line-height: em(24);
+          margin-top: 20px;
+
+          li {
+            list-style: none;
+            position: relative;
+
+            &:before {
+              content: "*";
+              color: $product-background;
+              font-size: em(30);
+              left: -20px;
+              top: 9px;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+}

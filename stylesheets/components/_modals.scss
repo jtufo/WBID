@@ -1,0 +1,72 @@
+// This includes the margin offset of the .modal-dialog, the height of .modal-header, and the bottom padding of .modal-body
+$modal-body-height-offset: (30px * 2) + 106px + 30px;
+
+.modal-dialog {
+  width: 700px;
+
+  .modal-content {
+    border: {
+      width: 0px;
+      radius: 0px;
+    }
+  }
+
+  .modal-container {
+    .modal-header {
+      border-bottom: none;
+      padding: 30px;
+      position: relative;
+
+      button.close {
+        $close-position: -20px;
+        background-color: #d0d8db;
+        border-radius: 25px;
+        color: #4b4b4b;
+        font-size: 25px;
+        opacity: 1;
+        outline: 0;
+        padding: 10px 13px;
+        position: absolute;
+        right: $close-position;
+        top: $close-position;
+        transition: 0.2s;
+        z-index: 2;
+      }
+
+      h1 {
+        @include font-size(42px);
+        color: $product-background;
+        text-align: center;
+      }
+    }
+
+    .modal-body {
+      color: #777;
+      padding: 0 40px 30px;
+
+      .scrolling-box {
+        max-height: 480px; // IE8 fallback
+        max-height: calc(100vh - #{$modal-body-height-offset});
+        overflow-y: auto;
+      }
+    }
+
+    // Modal for Videos
+
+    &.video {
+      .modal-header {
+        padding: 15px;
+      }
+
+      .modal-body {
+        padding: 0 25px 25px;
+      }
+
+      .scrolling-box {
+        max-height: none;
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  }
+}

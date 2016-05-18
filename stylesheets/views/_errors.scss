@@ -1,0 +1,48 @@
+body.errors {
+  > #content {
+    @include inner-container(10);
+  }
+
+  .page-content-full {
+    overflow: hidden;
+    padding: 40px 0 50px;
+    position: relative;
+  }
+
+  .error-container {
+    @include clearfix;
+    margin: 0 auto 128px;
+    position: relative;
+    width: 1070px;
+  }
+
+  h1.error-code {
+    @include font-size(390px);
+    color: $color-yellow;
+    font: {
+      family: 'Roboto Condensed', sans-serif;
+      weight: 700;
+    }
+    transform: rotate(-5deg) skew(-7deg, -5deg);
+  }
+
+  .error-content {
+    font-family: $font-secondary;
+    margin: 20px 0 10px;
+
+    p {
+      @include font-size(26px);
+      font-style: italic;
+    }
+  }
+
+  .error-title {
+    @include font-size(37px);
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .error-character {
+    position: absolute;
+  }
+}

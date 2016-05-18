@@ -1,0 +1,19 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.rewards.show {
+    .shipping-content {
+      .shipping-content-form {
+        padding: 30px 30px 60px;
+      }
+    }
+
+    .shipping-content-output {
+      padding-top: 25px;
+    }
+
+    .shipping-divider {
+      img {
+        width: 80%;
+      }
+    }
+  }
+}

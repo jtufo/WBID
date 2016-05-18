@@ -1,0 +1,42 @@
+@media only screen and (max-width: $screen-xs-max) {
+  .modal-dialog {
+    width: 95%;
+
+    .modal-content {
+      .modal-container {
+        .modal-header {
+          padding: 30px 15px;
+
+          button.close {
+            font-size: 18px;
+            height: 30px;
+            line-height: 18px;
+            right: -5px;
+            top: -5px;
+            padding: 0;
+            width: 30px;
+          }
+        }
+
+        .modal-body {
+          padding: 0 20px 8px;
+
+          .scrolling-box {
+            padding-right: 0;
+          }
+        }
+
+        &.video {
+          .modal-header {
+            padding: 0px;
+          }
+
+          video {
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

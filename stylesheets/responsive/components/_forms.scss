@@ -1,0 +1,129 @@
+// We still want to inline-block radio and checkbox labels when on mobile.
+// Bootstrap only applies these rules when the screen is <768px.
+// https://github.com/twbs/bootstrap-sass/blob/v3.2.0/assets/stylesheets/bootstrap/_forms.scss#L434-L452
+@media only screen and (max-width: $screen-xs-max) {
+  .form-error {
+    padding: 20px 15px 10px;
+
+    ul {
+      font-size: 13px;
+      padding-left: 30px;
+    }
+  }
+
+  form {
+    &.form-inline {
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .radio,
+      .checkbox {
+        display: inline-block;
+        margin: {
+          top: 0;
+        }
+        vertical-align: middle;
+
+        label {
+          padding-left: 0;
+        }
+      }
+
+      .radio input[type="radio"],
+      .checkbox input[type="checkbox"] {
+        position: relative;
+        margin-left: 0;
+      }
+
+      .radio {
+        line-height: normal;
+
+        input[type="radio"] {
+          border-width: 2px;
+          box-shadow: 0 0 0 3px #ddd;
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+      .checkbox {
+        margin: {
+          left: 40px;
+          top: 10px;
+        }
+
+        input[type="checkbox"] {
+          background: {
+            repeat: no-repeat;
+            size: 95%;
+          }
+          height: 26px;
+          margin: {
+            left: -40px !important;
+            top: 0;
+          }
+          width: 26px;
+        }
+      }
+    }
+
+    label.checkbox.required-field {
+      margin-top: 8px;
+
+      ~ span.required-field {
+        left: 46px;
+      }
+    }
+
+    .input-group {
+      .input-group-addon {
+        line-height: em(42);
+      }
+    }
+
+    #user_dob_field .row {
+      .col-xs-4:first-child {
+        padding-right: 0;
+      }
+
+      .col-xs-4:nth-child(2) {
+        padding: 0 5px;
+      }
+
+      .col-xs-4:last-child {
+        padding-left: 0;
+      }
+    }
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+      appearance: none;
+      border-width: 3px;
+      height: 42px;
+      padding: 8px;
+    }
+
+    select {
+      background-position: 90% center;
+
+      &#user_country {
+        background-position: 98% center;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.terms-box {
+  border: 3px solid #ddd;
+  padding: 30px 25px 30px 35px;
+
+  .scrolling-box {
+    font-size: em(16);
+    height: 345px;
+    overflow-y: scroll;
+  }
+}
+
+.scrolling-box {
+  padding-right: 60px;
+
+  &::-webkit-scrollbar {
+    background-color: $custom-scrollbar-background;
+    border: {
+      color: #fff;
+      style: solid;
+      width: 0 5px;
+    }
+    width: 21px;
+
+    &:hover {
+      background-color: darken($custom-scrollbar-background, 5%);
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($custom-scrollbar-background, 20%);
+    border: {
+      color: #fff;
+      style: solid;
+      width: 0 5px;
+    }
+
+    &:hover {
+      background-color: darken($custom-scrollbar-background, 25%);
+    }
+
+    &:active {
+      background-color: darken($custom-scrollbar-background, 35%);
+    }
+  }
+
+  &::-webkit-scrollbar-button:vertical {
+    background-color: $product-background;
+    display: block;
+    height: 25px;
+    width: 21px;
+
+    &:start,
+    &:end {
+      background: {
+        position: center;
+        size: 150%;
+      }
+    }
+
+    &:start {
+      background-image: image-url("application/scroll-arrow-top.svg");
+
+      &:increment {
+        display: none;
+      }
+    }
+
+    &:end {
+      background-image: image-url("application/scroll-arrow-bottom.svg");
+
+      &:decrement {
+        display: none;
+      }
+    }
+  }
+}

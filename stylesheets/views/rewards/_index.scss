@@ -1,0 +1,131 @@
+body.rewards.index {
+  h3,
+  h4 {
+    color: $product-background;
+    font: {
+      family: $font-primary;
+      weight: bold;
+    }
+    margin: 0;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    @include font-size(22px);
+  }
+
+  // Rewards Incentives
+  .incentives {
+    margin-top: 70px;
+  }
+
+  .reward-incentive {
+    margin: 0 -2px 64px;
+    text-align: center;
+
+    a.restrictions {
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+
+  img.incentive-img {
+    margin-bottom: 25px;
+  }
+
+  .incentive-count {
+    @include font-size(18px);
+    color: $product-background;
+    font-family: $font-secondary;
+    margin: 5px 0;
+  }
+
+  .btn-redeem {
+    margin: 20px auto 0;
+    width: 50%;
+  }
+
+  // Reward Behaviors
+  #rewards-behaviors {
+    padding: {
+      bottom: 60px;
+      top: 60px;
+    }
+
+    .earning-credits {
+      text-align: center;
+
+      a {
+        color: $product-background;
+        display: inline-block;
+        font: {
+          style: italic;
+          weight: bold;
+        }
+        margin: 10px 6px;
+        text: {
+          decoration: underline;
+          transform: uppercase;
+        }
+      }
+
+      span {
+        color: $product-background;
+        font: {
+          style: italic;
+          weight: bold;
+        }
+      }
+    }
+
+    .reward-behavior {
+      border: {
+        right: 1px solid $color-grey-light;
+        top: 1px solid $color-grey-light;
+      }
+      padding: 40px 25px 40px 55px;
+
+      &:nth-child(even) {
+        border-right: 0;
+      }
+
+      a.more-info {
+        @include font-size(16px);
+        font-style: italic;
+        text-decoration: underline;
+      }
+
+      .checkmark-icon {
+        @include background-svg(rewards, icon-checkmark);
+        @include size(33px);
+        background: {
+          size: contain;
+          repeat: no-repeat;
+        }
+      }
+    }
+
+    .behaviors {
+      padding-top: 60px;
+    }
+
+    .behavior-title {
+      margin: 0 55px 10px 0;
+    }
+
+    .behavior-completed {
+      color: $color-green-light;
+      font: {
+        style: italic;
+        weight: bold;
+      }
+    }
+  }
+
+  .wbt-action {
+    padding-bottom: 100px;
+  }
+}

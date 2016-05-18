@@ -1,0 +1,20 @@
+body.rewards {
+
+  //Rewards Header
+  .page-header {
+    @extend .page-header-white;
+  }
+
+  // Rewards Body
+  #rewards-body-wrapper {
+    margin-top: -95px;
+    padding: {
+      bottom: 75px;
+      top: 150px;
+    }
+  }
+
+  .rewards-divider {
+    margin: 0 0 60px;
+  }
+}

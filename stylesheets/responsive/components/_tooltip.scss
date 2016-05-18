@@ -1,0 +1,8 @@
+@media only screen and (max-width: $screen-xs-max) {
+  .tooltip {
+    .tooltip-inner {
+      max-width: 250px;
+      padding: 12px;
+    }
+  }
+}

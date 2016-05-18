@@ -1,0 +1,35 @@
+body.enrollments.hippo_primary_subscriber {
+  #content form#new_enrollment .more-information {
+    .form-group {
+      &.enrollment_subscriber_type {
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+
+    #primary_subscriber_fields {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s, opacity 0.4s;
+      transition-timing-function: linear;
+
+      &.visible {
+        max-height: 1000px; // you can't animate height 0 -> auto, so this is the easiest work-around, setting `max-height` to a crazy high number
+        opacity: 1;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      h4 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+}

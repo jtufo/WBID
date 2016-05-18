@@ -1,0 +1,29 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.congratulations.show {
+    @each $name, $colors in $product-colors {
+      &.#{$name} {
+        #content {
+          background-image: none;
+        }
+      }
+    }
+
+    #content {
+      > .container {
+        padding: {
+          bottom: 0;
+          top: 30px;
+        }
+      }
+    }
+
+    .congratulations-logo {
+      margin: 0 0 25px;
+      text-align: center;
+
+      img {
+        max-width: 70%;
+      }
+    }
+  }
+}

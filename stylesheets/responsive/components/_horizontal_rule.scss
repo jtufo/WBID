@@ -1,0 +1,14 @@
+@media only screen and (max-width: $screen-xs-max) {
+  .hr {
+    margin: 25px 0;
+
+    span.or {
+      $circle-size-mobile: 26px;
+      @include absolute-center($circle-size-mobile);
+      font-size: 12px;
+      height: $circle-size-mobile;
+      line-height: $circle-size-mobile;
+      margin-top: -($circle-size-mobile / 2);
+    }
+  }
+}

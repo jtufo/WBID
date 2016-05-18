@@ -1,0 +1,135 @@
+body.rewards.show {
+  $shipping-form-bg: #ffffff;
+
+  // Rewards Shipping Banner
+  .rewards-header-box {
+    text-align: left;
+
+    .incentive-chosen,
+    .incentive-title {
+      color: $product-background;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .incentive-title {
+      @include font-size(26px);
+      font-weight: bold;
+    }
+  }
+
+  // Shippable Rewards Form
+  .shipping-content {
+    background: #ebe8e2;
+  }
+
+  .shipping-instructions {
+    @include font-size(14px);
+    font: {
+      family: $font-secondary;
+      style: italic;
+    }
+    margin: 5px 0 0;
+  }
+
+  .shipping-content-form {
+    background: image-url("application/rewards/shipping-pattern.png") repeat-x top left, image-url("application/rewards/shipping-pattern.png") repeat-x bottom left $shipping-form-bg;
+    padding: 78px 60px;
+
+    label {
+      display: none;
+    }
+
+    input,
+    select {
+      @include font-size(21px);
+      background-color: $shipping-form-bg;
+      border: none;
+      border-bottom: 3px solid #e6e6e6;
+      font-weight: bold;
+      height: auto;
+      margin-bottom: 3px;
+      padding: 28px 0 10px 0;
+
+      // Removes Chrome default yellow background on inputs
+      &:-webkit-autofill {
+        box-shadow: 0 0 0px 1000px $shipping-form-bg inset;
+      }
+    }
+
+    input::placeholder {
+      color: lighten($color-default-font, 30%);
+      font-weight: bold;
+    }
+
+    .error {
+      input,
+      select {
+        padding-left: 10px;
+      }
+    }
+
+    .form-error {
+      background: none;
+      padding: 0;
+      width: 100%;
+
+      i {
+        display: none;
+      }
+
+      h4 {
+        @include font-size(26px);
+        line-height: normal;
+        margin: 0 0 20px;
+      }
+    }
+  }
+
+  .shipping-content-output {
+    padding: 45px 50px 0 25px;
+
+    .title {
+      @include font-size(24px);
+      font-weight: bold;
+      color: $product-background;
+    }
+
+    .address {
+      @include font-size(20px);
+      font: {
+        family: $font-secondary;
+        style: italic;
+      }
+      line-height: 1.6em;
+    }
+  }
+
+  .shipping-stamp {
+    margin-bottom: 50px;
+    text-align: right;
+  }
+
+  .shipping-divider {
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  .shipping-actions {
+    text-align: center;
+    
+    .btn-confirm-shippable {
+      margin: 0 auto;
+      width: 73%;
+    }
+
+    .credits-deducted {
+      @include font-size(16px);
+      font: {
+        family: $font-secondary;
+        style: italic;
+      }
+      margin-top: 25px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+$flash-list: alert #ca3433, notice #9ca51b, info #1ab0ae;
+
+.flash {
+  background-color: $color-grey-dark;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 250;
+
+  .flash-inner {
+    @include font-size(21px);
+    color: #fff;
+    font: {
+      style: italic;
+      weight: bold;
+    }
+    margin: 0;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    > i.fa {
+      $icon-size: 36px;
+      @include font-size(16px);
+      background-color: #ca3433;
+      border: 3px solid #fff;
+      border-radius: 40px;
+      color: #fff;
+      display: inline-block;
+      height: $icon-size;
+      line-height: $icon-size - 3;
+      margin-right: 10px;
+      text-align: center;
+      vertical-align: top;
+      width: $icon-size;
+    }
+
+    .flash-arrow {
+      display: none;
+    }
+
+    .flash-message {
+      display: inline-block;
+      padding-top: 5px;
+      text-align: left;
+    }
+
+    .flash-message-content {
+      a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+
+    a.close {
+      @include font-size(20px);
+      color: #c8c8c8;
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  @each $name, $color in $flash-list {
+    &.is-#{$name} {
+      .flash-inner {
+        > i.fa {
+          background-color: $color;
+        }
+      }
+    }
+  }
+}

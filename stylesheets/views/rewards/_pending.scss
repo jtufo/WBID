@@ -1,0 +1,20 @@
+body.rewards.pending {
+  text-align: center;
+  
+  .page-actions {
+    background: $color-grey-light;
+    padding: 75px 0 155px;
+  }
+
+  .rewards-pending-img {
+    margin-bottom: -78px;
+  }
+
+  .wrapping-up {
+    color: $product-background;
+    font: {
+      family: $font-primary;
+      weight: bold;
+    }
+  }
+}

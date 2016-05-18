@@ -1,0 +1,188 @@
+body.rewards.valhealth {
+  #current-drawing {
+    background: $grey-wrapper-bg;
+    padding: 40px 0;
+
+    .reward-behavior-progress {
+      .goal-met {
+        color: #cac2b1;
+        text: {
+          align: center;
+          transform: uppercase;
+        }
+      }
+    }
+
+    p.current-drawing {
+      @include font-size(15px);
+      text-transform: uppercase;
+    }
+  }
+
+  #drawing-status-bar {
+    background: darken($color-grey-light, 3);
+    padding: 24px 0;
+    text-align: center;
+
+    .status-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-right: 1px solid #d5d2cb;
+        display: inline-block;
+        width: 18%;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    .status-title {
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .status {
+      @include font-size(26px);
+      font-weight: bold;
+    }
+  }
+
+  .behavior-title {
+    @include font-size(32px);
+
+    img {
+      height: 20px;
+      margin: -5px 0 0 5px;
+    }
+  }
+
+  .btn-product {
+    display: inline-block;
+    padding: {
+      left: 30px;
+      right: 30px;
+    }
+    width: auto;
+  }
+
+  .wbt-action {
+    margin-top: 30px;
+  }
+
+  // Progress Bar
+  .reward-behavior-progress {
+    @include font-size(18px);
+    margin-bottom: 10px;
+
+    .value {
+      bottom: 47px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  // More drawings
+  #more-drawings {
+    padding-top: 55px;
+
+    .earning-title {
+      @include font-size(28px);
+      margin-bottom: 10px;
+    }
+
+    .behavior-title {
+      @include font-size(24px);
+    }
+
+    .rewards-divider {
+      margin: {
+        bottom: 30px;
+        top: 50px;
+      }
+    }
+
+    .drawing {
+      border-bottom: 1px solid $color-grey-light;
+      padding: 30px 0;
+    }
+
+    .view-more {
+      margin-top: 30px;
+      text-align: right;
+
+      a {
+        color: $product-background;
+        font: {
+          style: italic;
+          weight: bold;
+        }
+        text: {
+          decoration: underline;
+          transform: uppercase;
+        }
+      }
+    }
+  }
+
+  // Reward Drawings Status
+  .reward-drawings-status {
+    text-align: center;
+
+    .status {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .start,
+    .end {
+      font-style: italic;
+      padding-top: 4px;
+    }
+
+    .date {
+      @include font-size(26px);
+      color: $color-green-light;
+    }
+
+    .time {
+      @include font-size(18px);
+    }
+  }
+
+  // Lottery
+  .lottery {
+    padding-top: 25px;
+    text-align: center;
+
+    .lottery-number {
+      @include font-size(56px);
+      color: $color-blue;
+      font-family: $font-secondary;
+      line-height: normal;
+      position: relative;
+
+      &::after,
+      &::before {
+        color: $color-orange;
+        content: '\f006';
+        font: {
+          family: FontAwesome;
+          size: 25px;
+        }
+        vertical-align: text-top;
+      }
+    }
+  }
+
+  .rules-link {
+    font: {
+      style: italic;
+      weight: bold;
+    }
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,19 @@
+// ==========================================================================
+// This stylesheet contains base styles - try to avoid adding ids and classes in here.
+// ==========================================================================
+
+body,
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased; // Fixes how Chrome (webkit browsers) render fonts.
+}
+
+body {
+  background-color: $footer-background;
+  color: $color-default-font;
+}
+
+img {
+  height: auto;
+  max-width: 100%; // All images should be responsive
+}

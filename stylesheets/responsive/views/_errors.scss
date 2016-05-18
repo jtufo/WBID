@@ -1,0 +1,88 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.errors {
+    &.internal_server_error {
+      .error-title {
+        padding-right: 0;
+      }
+    }
+
+    .error-container {
+      margin: 0;
+      padding: 0 15px;
+      width: 100%;
+      z-index: 3;
+    }
+
+    h1.error-code {
+      @include font-size(260px);
+    }
+
+    .Stars,
+    .Star,
+    .Starburst,
+    .Starcluster,
+    .Spaceship--2,
+    .Spaceship--3,
+    .Spaceship--4,
+    .Spaceship-beam,
+    .Spaceship-eyes {
+      display: none;
+    }
+
+    .Spaceship,
+    .error-character {
+      margin: 10px 0 20px;
+      position: static;
+    }
+
+    .Spaceship--1 {
+      animation: none;
+      background: {
+        image: image_url("application/errors/500/space-1-with-eye.png");
+        repeat: no-repeat;
+        size: 100%;
+      }
+      left: 0;
+      margin-top: 30px;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+/* No greater than 940, no less than 720 - to address some responive weirdness */
+
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+  body.errors {
+    .error-character {
+      img {
+        width: 70%;
+      }
+    }
+
+    h1.error-code {
+      font-size: 220px;
+    }
+
+    .Stars,
+    .Star,
+    .Starburst,
+    .Starcluster,
+    .Spaceship,
+    .Spaceship-beam,
+    .Spaceship-eyes {
+      animation: none;
+      transform: scale(0.6, 0.6);
+    }
+
+    .Stars {
+      left: 35%;
+      top: 3%;
+    }
+
+    .Spaceship--1 {
+      left: 40%;
+      top: 40%;
+    }
+  }
+}

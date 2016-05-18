@@ -1,0 +1,58 @@
+$video-shadow-size: 43px;
+
+.Video-box {
+  @extend .col-centered;
+  background: #ffffff;
+  display: block;
+  margin-bottom: -$video-shadow-size;
+  padding: 7px 7px 15px;
+  position: relative;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  width: 100%;
+
+  &::after {
+    border: {
+      right: $video-shadow-size solid transparent;
+      top: $video-shadow-size solid rgba(0, 0, 0, 0.2);
+    }
+    bottom: 0;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -$video-shadow-size;
+    width: 0;
+  }
+
+  .Video-box-img {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .Video-box-title,
+  .Video-box-description {
+    margin: 4px 0;
+  }
+
+  .Video-box-title {
+    @include font-size(18px);
+    color: $color-purple;
+    font-weight: bold;
+  }
+
+  .Video-box-description {
+    @include font-size(15px);
+  }
+}
+
+.Video-box--border {
+  $video-border-width: 6px;
+  border: $video-border-width solid $color-grey-light;
+
+  &::after {
+    bottom: -$video-border-width;
+    right: -($video-shadow-size + $video-border-width);
+  }
+}

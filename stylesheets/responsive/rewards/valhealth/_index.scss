@@ -1,0 +1,52 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.rewards.valhealth {
+    .drawing-logo {
+      text-align: center;
+    }
+
+    .btn-product {
+      display: block;
+      margin-top: 30px;
+    }
+
+    #drawing-status-bar {
+      padding: 0;
+
+      .status-list {
+        li {
+          margin: 20px 0;
+          width: 48%;
+
+          &:nth-child(even) {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    #more-drawings {
+      padding-top: 30px;
+
+      .rewards-divider {
+        margin: 10px 0;
+      }
+
+      .drawings {
+        padding: 20px 0;
+      }
+    }
+
+    .earning-credits {
+      img {
+        display: none;
+      }
+    }
+
+    // Reward Drawing Status
+    .reward-drawings-status {
+      .date {
+        font-size: 14px;
+      }
+    }
+  }
+}

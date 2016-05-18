@@ -1,0 +1,19 @@
+@mixin vertical-align {
+  display: inline-block;
+  float: none;
+  height: 100%;
+  vertical-align: middle;
+}
+
+@mixin absolute-center($width) {
+  left: 50%;
+  margin-left: -($width / 2);
+  position: absolute;
+  width: $width;
+}
+
+@mixin size($width, $height: $width) {
+  // Overrides bootstrap mixin
+  width: $width;
+  height: $height;
+}

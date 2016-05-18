@@ -1,0 +1,161 @@
+body.errors {
+  &.not_found {
+    > #content {
+      background-color: #434343;
+    }
+
+    .page-content-full {
+      padding-bottom: 0;
+    }
+
+    .error-content {
+      p {
+        color: $color-yellow;
+      }
+    }
+
+    .error-title {
+      color: #ffffff;
+    }
+
+    .Button {
+      width: 270px;
+    }
+
+    .error-character {
+      bottom: -30px;
+      right: 0;
+      z-index: 2;
+    }
+
+    .error-ground {
+      background: #5d5d5d;
+      bottom: -282px;
+      height: 350px;
+      left: 0;
+      position: absolute;
+      transform: skew(0deg, -10deg);
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+// Star Animation
+
+.Star,
+.Starburst,
+.Starcluster {
+  position: absolute;
+}
+
+// Stars
+
+@keyframes starlight {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(120, 130, 155, .5);
+    opacity: 0.5;
+  }
+  50% {
+    box-shadow: 0px 0px 20px 11px rgba(120, 130, 155, .5);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px rgba(120, 130, 155, .5);
+    opacity: 0.5;
+  }
+}
+
+.Star {
+  background: #fcc729 ;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px 7px rgba(255, 225, 137, .5);
+  height: 5px;
+  width: 5px;
+}
+
+.Star--lg {
+  height: 8px;
+  width: 8px;
+}
+
+$star-positions: 80% 36%, 83% 40%, 80% 42%, 92% 47%, 93% 55%, 76% 39%, 90% 48%, 84% 59%, 103% 33%, 97% 32%;
+
+@each $position in $star-positions {
+  $index: index($star-positions, $position);
+
+  .Star--#{$index} {
+    animation: starlight $index + 2.6s ease-in infinite;
+    left: nth($position, 1);
+    top: nth($position, 2);
+  }
+}
+
+// Starbursts
+
+@keyframes starburst-blink {
+  0% {
+    background-image: image_url("application/errors/404/star.png");
+  }
+  50% {
+    background-image: image_url("application/errors/404/star-glow.png");
+  }
+  100% {
+    background-image: image_url("application/errors/404/star.png");
+  }
+}
+
+.Starburst {
+  background: {
+    image: image_url("application/errors/404/star.png");
+    repeat: no-repeat;
+    position: center center;
+  }
+  height: 71px;
+  width: 71px;
+}
+
+$starburst-positions: 73% 47%, 81% 31%, 72% 20%, 84% 51%, 98% 32%, 76% 53%, 75% 17%, 98% 26%;
+
+@each $position in $starburst-positions {
+  $index: index($starburst-positions, $position);
+
+  .Starburst--#{$index} {
+    animation: starburst-blink $index + 3s ease-in-out infinite;
+    left: nth($position, 1);
+    top: nth($position, 2);
+  }
+}
+
+.Starburst--2,
+.Starburst--3,
+.Starburst--4,
+.Starburst--5 {
+  background-size: 70%;
+}
+
+.Starburst--6,
+.Starburst--7,
+.Starburst--8 {
+  background-size: 50%;
+}
+
+// Starcluster - gray stars
+
+.Starcluster {
+  height: 80px;
+  width: 80px;
+}
+
+$starcluster-positions: -11% 103%, 36% 46%, 97% 47%, 5% 3%;
+
+@each $position in $starcluster-positions {
+  $index: index($starcluster-positions, $position);
+
+  .Starcluster--#{$index} {
+    background-image: image_url("application/errors/404/starcluster-#{$index}.png");
+    left: nth($position, 1);
+    top: nth($position, 2);
+  }
+}
+

@@ -1,0 +1,159 @@
+@each $name, $colors in $product-colors {
+  $background: map-get($colors, "background");
+  $background-dark: map-get($colors, "background-dark");
+  $background-focus: map-get($colors, "background-focus");
+  $background-light: map-get($colors, "background-light");
+  $text: map-get($colors, "text");
+
+  body.#{$name} {
+    #content {
+      .page-header {
+        background-color: $background;
+        color: $text;
+      }
+    }
+
+    &.users, &.user_sessions {
+      #content {
+        .page-subheader {
+          background-color: $background-dark;
+          color: $text;
+        }
+      }
+    }
+
+    // buttons
+    input[type="submit"],
+    .Button--product {
+      background-color: $background;
+      color: $text;
+
+      &:hover, &:focus {
+        background-color: $background-focus;
+      }
+    }
+
+    // modals
+    .modal-dialog {
+      .modal-container {
+        .modal-header {
+          h1 {
+            color: $background;
+          }
+        }
+      }
+    }
+
+    // scrolling box
+    .scrolling-box {
+      &::-webkit-scrollbar-button:vertical {
+        background-color: $background;
+      }
+    }
+
+    // enrollments
+    &.enrollments {
+      // enrollments/hippo
+      &.hippo {
+        &.create {
+          #content {
+            form#new_enrollment {
+              ul {
+                li {
+                  &:before {
+                    color: $background;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // congratulations
+    &.congratulations {
+      #content {
+        background: {
+          image: image-url("application/congratulations/#{$name}-footer.png");
+          position: bottom;
+          repeat: repeat-x;
+        }
+      }
+
+      h1,
+      a.support-link {
+        color: $background;
+      }
+    }
+
+    // supplemental_questions
+    &.supplemental_questions {
+      .supplemental-question-banner {
+        background: $background-focus;
+      }
+
+      #content {
+        form {
+          label {
+            input[type="radio"] {
+
+              &:checked {
+                background-color: $background-light;
+              }
+            }
+          }
+          table {
+            th {
+              background-color: $background-focus;
+              color: $text;
+            }
+          }
+        }
+      }
+    }
+
+    &.users {
+      .fb-asset {
+        &.fb-connected {
+          color: $background;
+        }
+      }
+    }
+
+    // forms
+    form {
+      label {
+        &.radio {
+          input[type="radio"] {
+            &:checked {
+              background-color: $background;
+            }
+          }
+        }
+
+        &.checkbox {
+          input[type="checkbox"] {
+            &:checked {
+              background-color: $background;
+            }
+          }
+        }
+      }
+
+      select {
+        background-image: image-url("application/dropdown-arrow-#{$name}.svg");
+      }
+    }
+
+    // layout
+    header {
+      .logo {
+        &#product-logo {
+          background-image: image-url("application/product-logo-#{$name}.png");
+          display: block;
+        }
+      }
+    }
+  }
+}

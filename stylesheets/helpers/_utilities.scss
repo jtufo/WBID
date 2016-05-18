@@ -1,0 +1,51 @@
+// ==========================================================================
+// This stylesheet contains utility classes - utility class applies a single rule or a very simple, universal pattern
+// ==========================================================================
+
+
+.p-call-out {
+  color: #777777;
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+  line-height: 25px;
+}
+
+#offscreen {
+  overflow: hidden;
+  text-indent: -9999px;
+  height: 0;
+}
+
+.wrapper-dark {
+  background: #f6f3ee;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.u-row-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.u-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+
+  div[class*='col-'] {
+    margin: {
+      left: -0.4px; /* hack adjust for wrapping */
+      right: -0.4px;
+    }
+  }
+}
+
+.u-row-wrap-center {
+  align-items: center;
+  justify-content: center;
+}

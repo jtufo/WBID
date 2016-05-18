@@ -1,0 +1,158 @@
+.Button {
+  @include font-size(20px);
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+  display: block;
+  font-weight: bold;
+  margin-top: 30px;
+  outline: none;
+  padding: {
+    top: 18px;
+    bottom: 16px;
+  }
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  transition: 0.3s;
+  width: 100%;
+  -webkit-font-smoothing: antialiased; // Fixes how Chrome (webkit browsers) render fonts.
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+// For products
+
+.Button--product {
+  background-color: $product-background;
+  color: $product-text;
+
+  &:hover,
+  &:focus {
+    background-color: $product-background-focus;
+  }
+}
+
+// Colors
+
+.Button--purple {
+  background-color: $color-purple;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-purple, 5%);
+    color: #ffffff;
+  }
+}
+
+.Button--grey {
+  @include font-size(18px);
+  background-color: $color-grey;
+  color: #666;
+  text-transform: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-grey-focus;
+  }
+}
+
+.Button--pink {
+  background-color: $color-pink;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-pink, 5%);
+    color: #ffffff;
+  }
+}
+
+.Button--orange {
+  $bg-color: $color-orange;
+  background-color: $bg-color;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: darken($bg-color, 2%);
+    color: darken(#ffffff, 2%);
+  }
+}
+
+.Button--blue {
+  background-color: $color-blue-facebook;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-blue-facebook, 5%);
+    color: darken(#ffffff, 2%);
+  }
+}
+
+// Sizes
+
+.Button--small {
+  @include font-size(16px);
+  padding: em(16) 0;
+  text-transform: uppercase;
+}
+
+// Facebook Modifier
+
+.Button--facebook {
+  @extend .Button--blue;
+  padding-left: 65px;
+  position: relative;
+
+  &::before {
+    @include font-size(31px);
+    border-right: 1px solid darken($color-blue-facebook, 8%);
+    content: "\f09a";
+    font-family: FontAwesome;
+    left: 25px;
+    margin: 10px 0;
+    padding-right: 8%;
+    position: absolute;
+    top: 0;
+  }
+}
+
+// Loading Button - Specifically for Eligibility
+
+.Button-load-submit {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  min-width: 100%;
+  text-indent: 1em; // To make up for the icon always being present
+  width: auto;
+
+  .icon {
+    display: inline;
+    opacity: 0;
+  }
+
+  &.submit-active {
+    border-radius: 50%;
+    min-width: 60px;
+    text-indent: 0em;
+    transition: all 300ms ease-out;
+
+    span {
+      display: none;
+    }
+
+    .icon {
+      opacity: 1;
+      transition: opacity 1200ms ease;
+    }
+  }
+}

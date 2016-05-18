@@ -1,0 +1,35 @@
+@media only screen and (max-width: $screen-xs-max) {
+  body.rewards {
+    #rewards-body-wrapper {
+      padding-top: 115px;
+    }
+
+    .rewards-divider {
+      margin-bottom: 30px;
+    }
+
+    .rewards-header-box {
+      margin-left: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .credits-earned {
+      span {
+        $digit-height: 72px;
+        @include font-size(70px);
+        height: $digit-height;
+        line-height: $digit-height + 10;
+      }
+    }
+
+    // Pending Rewards
+    &.pending {
+      .rewards-pending-img {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

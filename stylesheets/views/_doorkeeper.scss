@@ -1,0 +1,245 @@
+$product-attributes:
+  wellbeingtracker $color-wellbeingtracker,
+  walkadoo $color-walkadoo,
+  dailychallenge $color-dailychallenge,
+  hello200 $color-hello200,
+  quitnet $color-quitnet;
+
+body.authorized_applications {
+  .page-header {
+    background: $grey-wrapper-bg;
+
+    h1 {
+      color: $color-blue;
+    }
+
+    p {
+      color: $color-grey-dark;
+      padding: 0 40px;
+    }
+  }
+
+  section.application {
+    padding: 80px 0 0;
+
+    & ~ .application {
+      padding-top: 110px;
+    }
+  }
+
+  // Authorized Applications
+
+  section.is-authorized {
+    margin-bottom: -45px;
+    color: #ffffff;
+
+    .application-product-img {
+      background: {
+        repeat: no-repeat;
+        size: contain;
+      }
+      height: 0;
+      padding-top: 78%;
+      width: 109%;
+    }
+
+    &.premium {
+      .application-product-img {
+        position: relative;
+
+        &::before {
+          background: image-url("application/doorkeeper/premium-ribbon-right.png") no-repeat top right;
+          background-size: contain;
+          content: "";
+          right: 0;
+          padding-top: 20%;
+          position: absolute;
+          top: 0;
+          width: 121px;
+        }
+      }
+    }
+
+    &#application-hello200 {
+      .application-product-img {
+        background-position: top right;
+      }
+    }
+
+    // Flips the layout
+
+    &:nth-child(odd) {
+      &.premium {
+        .application-product-img {
+          &::before {
+            background: image-url("application/doorkeeper/premium-ribbon-left.png") no-repeat top left;
+            background-size: contain;
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+
+      &#application-hello200 {
+        .application-product-img {
+          background-position: top left;
+        }
+      }
+
+      .application-logo-box {
+        @extend .col-sm-push-6;
+      }
+
+      .application-product-box {
+        @extend .col-sm-pull-4;
+      }
+    }
+
+    a.application-logo {
+      color: #ffffff;
+      display: block;
+      text-align: center;
+
+      img {
+        padding-bottom: 25px;
+      }
+    }
+
+    .tagline {
+      margin-bottom: 10px;
+
+      + p {
+        font: {
+          style: italic;
+          weight: bold;
+        }
+      }
+    }
+  }
+
+  // Unauthorized Applications
+
+  section.is-unauthorized {
+    background: #ffffff;
+    padding-bottom: 70px;
+    text-align: center;
+
+    h2 {
+      color: $color-blue;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .unauthorized-learn-more {
+      padding-bottom: 75px;
+    }
+
+    .app-title {
+      @include font-size(18px);
+      font-weight: bold;
+      padding-bottom: 6px;
+    }
+
+    .app-icon {
+      background: {
+        position: center center;
+        repeat: no-repeat;
+      }
+      border-radius: 50%;
+      height: 70px;
+      margin: -56px auto 15px;
+      width: 70px;
+    }
+
+    .learn-more {
+      color: $color-blue;
+      font: {
+        style: italic;
+        weight: bold;
+      }
+    }
+
+    .unauthorized-application {
+      min-height: 240px;
+    }
+  }
+
+  // Product Specific
+
+  @each $attribute in $product-attributes {
+    section.is-authorized {
+      &:nth-child(odd) {
+        &#application-#{nth($attribute, 1)} {
+
+          .application-product-img {
+            background-image: image-url("application/doorkeeper/application-img/#{nth($attribute, 1)}-odd.png");
+          }
+        }
+      }
+    }
+
+    #application-#{nth($attribute, 1)} {
+      background-image: image-url("application/doorkeeper/bg/landing-bg-#{nth($attribute, 1)}.png");
+
+      .application-product-img {
+        background-image: image-url("application/doorkeeper/application-img/#{nth($attribute, 1)}.png");
+      }
+    }
+
+    .icon-#{nth($attribute, 1)} {
+      background: {
+        color: #{nth($attribute, 2)};
+        image: image-url("application/doorkeeper/application-icon/#{nth($attribute, 1)}-icon.png");
+      }
+    }
+  }
+
+  // Sponsor Section
+
+  section.account-options {
+    padding: 45px 0;
+
+    .account-info {
+      padding-bottom: 0;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+
+    .account-icon,
+    .reward-icon {
+      margin: 21px 0;
+    }
+
+    .sponsor-icon {
+      background-color: $color-grey-light;
+      height: 139px;
+      margin-top: 46px;
+      padding: 25px;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .btn-account-options {
+    margin-top: 0;
+  }
+
+  img {
+    max-width: 87%; // Override default responsive img
+  }
+
+  footer {
+    padding-top: 80px;
+  }
+}

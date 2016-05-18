@@ -1,0 +1,37 @@
+body.sponsorships.show {
+  h3 {
+    margin-bottom: 60px;
+    padding: 0 10px;
+  }
+
+  .manage-sponsorship {
+    font-weight: bold;
+    height: 235px;
+  }
+
+  .manage-sponsorship-header {
+    text-transform: uppercase;
+  }
+
+  .manage-sponsor-logo {
+    top: 45%;
+  }
+
+  ul.opt-out-list {
+    @include font-size (18px);
+    position: relative;
+
+    li {
+      list-style: none;
+      margin-top: 25px;
+
+      &::before {
+        color: $color-grey-focus;
+        content: '\f054';
+        font-family: FontAwesome;
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+}

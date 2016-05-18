@@ -1,0 +1,178 @@
+body.users,
+body.profiles {
+  form {
+    @include placeholder-italicized;
+
+    input {
+      &#user_profile_attributes_location_choice {
+        &[value="zip_code"] {
+          ~ #user_zip_code_field {
+            display: block;
+          }
+
+          ~ #user_country_field {
+            display: none;
+          }
+        }
+
+        &[value="country"] {
+          ~ #user_zip_code_field {
+            display: none;
+          }
+
+          ~ #user_country_field {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  a.user_location_choice {
+    font: {
+      family: $font-primary;
+      size: em(12);
+      style: italic;
+      weight: bold;
+    }
+
+    &::before {
+      content: "» ";
+    }
+  }
+
+  .accept-terms-container {
+    input[id="accept_terms"] {
+      margin: 0 0 3px;
+      position: static;
+      vertical-align: middle;
+    }
+  }
+
+  #content {
+    .page-subheader {
+      background-color: $product-background-dark;
+      color: $product-text;
+    }
+  }
+
+  .btn-fb-connect {
+    margin: 15px 0;
+  }
+
+  // Facebook User Elements
+  .fb-asset {
+    $fb-photo-size: 125px;
+    @include vertical-align;
+
+    &.fb-user-photo {
+      height: $fb-photo-size;
+      position: relative;
+      margin-right: 20px;
+      width: $fb-photo-size;
+
+      img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+      }
+
+      .fb-logo {
+        $fb-logo: 36px;
+        background: $color-blue-facebook;
+        border: 4px solid #ffffff;
+        border-radius: 50%;
+        bottom: 0;
+        color: #ffffff;
+        height: $fb-logo;
+        line-height: $fb-logo - 3;
+        position: absolute;
+        text-align: center;
+        right: 0;
+        width: $fb-logo;
+      }
+    }
+
+    &.fb-connected {
+      width: calc(100% - #{$fb-photo-size} - 20px - 5px);
+
+      div {
+        @include font-size(23px);
+        color: $product-background;
+        font-family: $font-secondary;
+      }
+
+      a {
+        @include font-size(18px);
+        font-style: italic;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Users - Edit
+body.users.edit {
+  .enrolled-sponsor {
+    height: 284px;
+    margin-top: 35px;
+    padding: 35px 0;
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .enrolled-sponsor-logo {
+    margin: 25px auto 0;
+  }
+
+  .manage-sponsor-link {
+    a {
+      color: $color-blue;
+      font: {
+        style: italic;
+        weight: bold;
+      }
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// Users - Disable
+body.users.disable {
+  ul {
+    list-style: none;
+    padding: 44px 0 60px;
+
+    li {
+      border-top: 1px solid #e6e0d5;
+      padding: 25px 0 25px 90px;
+
+      &:last-child {
+        border-bottom: 1px solid #e6e0d5;
+      }
+    }
+  }
+
+  .product-name {
+    @include font-size(26px);
+    font-weight: bold;
+    color: $product-background;
+  }
+
+  .things-you-can-do {
+    @include font-size(16px);
+    font: {
+      style: italic;
+      weight: bold;
+    }
+
+    a {
+      color: #999999;
+      margin-left: 10px;
+      text-decoration: underline;
+    }
+  }
+}

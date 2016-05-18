@@ -1,0 +1,46 @@
+// Header
+
+header {
+  @include inner-container;
+
+  background-color: $color-grey-dark;
+  color: #fff;
+
+  .logo {
+    background: {
+      repeat: no-repeat;
+    }
+    height: 97px;
+    text-indent: -10000px;
+
+    &#product-logo {
+      background-position: left center;
+    }
+
+    &#myh-logo {
+      background: {
+        image: image-url("application/myh-logo-white.png");
+        position: right center;
+      }
+    }
+  }
+
+  #contract-logo {
+    height: 97px;
+
+    #contract-logo-inner {
+      color: #dbdbdb;
+      font: {
+        size: 14px;
+        style: italic;
+      }
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        margin-left: 15px;
+      }
+    }
+  }
+}

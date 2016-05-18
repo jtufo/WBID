@@ -1,0 +1,16 @@
+body.user_sessions {
+  form#new_user_session {
+    @include placeholder-bolded;
+  }
+
+  #content {
+    .page-subheader {
+      background-color: $product-background-dark;
+      color: $product-text;
+    }
+  }
+
+  .btn-fb-connect {
+    margin: 15px 0;
+  }
+}

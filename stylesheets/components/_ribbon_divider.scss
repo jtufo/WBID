@@ -1,0 +1,73 @@
+.Ribbon-divider {
+  text-align: center;
+}
+
+.Ribbon {
+  $ribbon-height: 53px/2; 
+  $ribbon-border: 3px;
+  @include font-size(18px);
+  background: $product-background;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 15px 80px;
+  position: relative;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  z-index: 2;
+
+  &::after,
+  &::before {
+    border: {
+      bottom: $ribbon-height solid transparent;
+      top: $ribbon-height solid transparent;
+    }
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  &::after {
+    border-right: 18px solid $color-grey-light;
+    right: 0;
+  }
+
+  &::before {
+    border-left: 18px solid $color-grey-light;
+    left: 0;
+  }
+
+  + .hr-ribbon {
+    border-top: $ribbon-border solid $hr-color;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+
+    + p {
+      @include font-size(16px);
+      color: #8b8b8b;
+      font: {
+        family: $font-secondary;
+        style: italic;
+      }
+      padding-top: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.Ribbon--bg-white {
+  &::after,
+  &::before {
+    border: {
+      left-color: #ffffff;
+      right-color: #ffffff;
+    }
+  }
+}

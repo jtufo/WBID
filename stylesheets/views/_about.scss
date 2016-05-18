@@ -1,0 +1,144 @@
+body.about.index {
+  $input-addon-size: 65px;
+  
+  .page-header {
+    background: image-url("application/about/myh-burst.png") $grey-wrapper-bg no-repeat 805px bottom;
+    height: 405px;
+    margin-bottom: 75px;
+    padding-top: 75px;
+  }
+
+  .page-title {
+    text-align: center;
+
+    h1 {
+      @include font-size(42px);
+      color: $color-blue;
+    }
+
+    p {
+      color: #777777;
+      margin: 18px 0;
+      padding: 0 180px;
+    }
+
+    .get-started {
+      @include font-size(17px);
+      background: #ffffff;
+      padding: 0 16px;
+    }
+
+    hr {
+      margin: {
+        bottom: 60px;
+        top: -12px;
+      }
+    }
+  }
+
+  // Sign in & Register Box
+
+  .signin-register-box {
+    border: 8px solid $color-grey-light;
+
+    .hr + .Button {
+      margin-top: 0;
+    }
+  }
+
+  input[type="email"],
+  input[type="password"], {
+    border-color: #eee9e0;
+    height: $input-addon-size;
+  }
+
+  form {
+    .input-group-addon {
+      line-height: $input-addon-size;
+      width: $input-addon-size;
+
+      i.fa {
+        @include font-size(30px);
+      }
+    }
+
+    input {
+      border-left-width: $input-addon-size !important;
+    }
+  }
+
+  input[type= "radio"],
+  .tab-content {
+    display: none;
+  }
+
+  input[type= "radio"]:checked {
+    + .tabs-label {
+      background: #ffffff;
+    }
+  }
+
+  .tab-content {
+    padding: 45px 16% 75px;;
+
+    &.for-registering {
+      text-align: center;
+
+      p {
+        padding: 0 50px 15px;
+      }
+    }
+  }
+
+  .tabs-label {
+    @include font-size(20px);
+    background: $color-grey-light;
+    margin-right: -4px; // Removes inline-block space
+    padding: 26px 0;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    width: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @for $i from 1 through 2 {
+    input[type="radio"]:checked:nth-of-type(#{$i}) ~ .tab-content:nth-of-type(#{$i}) {
+      display: block;
+    }
+  }
+
+  .forgot-password {
+    @include font-size(18px);
+    color: #777777;
+    font: {
+      style: italic;
+      weight: bold;
+    }
+    margin-top: 0;
+    padding-bottom: 0;
+    text: {
+      decoration: underline;
+      transform: none;
+    }
+  }
+
+  // Learn More
+
+  .learn-more {
+    margin-top: 75px;
+
+    h2 {
+      color: $color-blue;
+      margin-bottom: 28px;
+    }
+  }
+
+  footer {
+    padding-top: 105px;
+  }
+}
